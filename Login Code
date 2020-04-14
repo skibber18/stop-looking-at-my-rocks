@@ -1,25 +1,51 @@
-Login Code
+# Login Code 
+# Lauren and Zachary 
+# April 14 
 
-# Imports tkinter
 from tkinter import *
-
-# Creates the main screen 
-def main_account_screen():
-    main_screen = Tk() # Creates a GUI window 
-    main_screen.geometry("300x250") # Sets the size of the GUI window
-    main_screen.title("IRock Account Login") # Sets the title of the window 
+global main_screen
+#def main_account_screen():
     
-# Create a Form Label
-Label(text="Login or Register for IRock", bg="blue", width="300", height="2", font=(Calibri", 13)).pack()
-Label(text="").pack()
+main_screen = Tk()   # create a GUI window 
+main_screen.geometry("300x250") # set the configuration of GUI window 
+main_screen.title("Account Login") # set the title of GUI window
 
-# Creates the Login Button 
-Button(text = "Login", height="2", width="30").pack()
-Label(text="").pack()
+# create a Form label 
+Label(text="Welcome to IROCK", bg="blue", width="300", height="2", font=("Calibri", 13)).pack()
+Label(text="Choose Login Or Register", bg="blue", width="300", height="2", font=("Calibri", 13)).pack()
+Label(text="").pack() 
 
-# Creates the Register button 
-Button(text = "Register", height="2", width="30").pack()
+# create Login Button 
+Button(text="Login", height="2", width="30").pack() 
+Label(text="").pack() 
 
-main_screen.mainloop()
+def register():
 
-main_account_screen()
+# The Toplevel widget work pretty much like Frame,
+# but it is displayed in a separate, top-level window. 
+#Such windows usually have title bars, borders, and other “window decorations”.
+# And in argument we have to pass global screen variable
+    
+    register_screen = Toplevel(main_screen) 
+    register_screen.title("Register")
+    register_screen.geometry("300x250")
+
+    username = StringVar()
+    password = StringVar()
+
+    Label(register_screen, text="Please enter details below", bg="blue").pack()
+    Label(register_screen, text="").pack()
+
+    username_entry = Entry(register_screen, textvariable=username)
+    username_entry.pack()
+
+    password_lable = Label(register_screen, text="Password * ")
+    password_lable.pack()
+
+    Label(register_screen, text="").pack()
+
+    Button(register_screen, text="Register", width=10, height=1, bg="blue").pack()
+# create a register button
+Button(text="Register", height="2", width="30", command=register).pack()
+
+main_screen.mainloop() # start the GUI
