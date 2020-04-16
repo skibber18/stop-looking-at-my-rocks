@@ -84,3 +84,98 @@ Label(register_screen, text="Registration Success", fg="green", font=("calibri",
 
 
 main_screen.mainloop() # start the GUI
+
+
+
+
+
+# April 16 Update
+# Below is more code for the login function (verifies username and password for login, login success popup, invalid password popup, etc.)
+# It was not working well. The register button disappeared, and it did not seem to work. 
+# So we need to keep working on it, but I think it is on the right track.
+
+# define login function
+def login():
+    
+    login_screen = Toplevel(main_screen)
+    login_screen.title("Login")
+    login_screen.geometry("300x250")
+    Label(login_screen, text="Please enter details below to login").pack()
+    Label(login_screen, text="").pack()
+
+    global username_verify
+    global password_verify
+
+    username_verify = StringVar()
+    password_verify = StringVar()
+
+   
+    Label(login_screen, text="Username * ").pack()
+    username_login_entry = Entry(login_screen, textvariable=username_verify)
+    username_login_entry.pack()
+    Label(login_screen, text="").pack()
+    Label(login_screen, text="Password * ").pack()
+    password__login_entry = Entry(login_screen, textvariable=password_verify, show= '*')
+    password__login_entry.pack()
+    Label(login_screen, text="").pack()
+    Button(login_screen, text="Login", width=10, height=1, command=login_verification).pack()
+
+
+def login_verification():
+    print("working...")
+
+
+
+def login_verify():
+#get username and password
+
+    username1 = username_verify.get()
+    password1 = password_verify.get()
+# this will delete the entry after login button is pressed
+    username_login_entry.delete(0, END)
+    password_login_entry.delete(0, END)
+
+#The method listdir() returns a list containing the names of the entries in the directory given by path.
+    list_of_files = os.listdir()  
+
+#defining verification's conditions 
+    if username1 in list_of_files:
+        file1 = open(username1, "r")   # open the file in read mode 
+        verify = file1.read().splitlines()
+        login_sucess()
+        password_not_recognised()
+
+    else:
+        user_not_found()
+
+
+# defines a function that shows a "login success" popup 
+def login_sucess():
+
+    global login_success_screen   # make login_success_screen global
+    login_success_screen = Toplevel(login_screen)
+    login_success_screen.title("Success")
+    login_success_screen.geometry("150x100")
+    Label(login_success_screen, text="Login Success").pack()
+
+# create OK button
+    Button(login_success_screen, text="OK", command=delete_login_success).pack()
+
+
+# defines a function to delete the "login success" popup
+def delete_login_success():
+    login_success_screen.destroy()
+
+# Creates an "invalid password" popup
+def password_not_recognised():
+    global password_not_recog_screen
+    password_not_recog_screen = Toplevel(login_screen)
+    password_not_recog_screen.title("Success")
+    password_not_recog_screen.geometry("150x100")
+    Label(password_not_recog_screen, text="Invalid Password ").pack()
+    Button(password_not_recog_screen, text="OK", command=delete_password_not_recognised).pack()
+
+# Deletes the "invalid password" popup
+def delete_password_not_recognised():
+    password_not_recog_screen.destroy()
+
