@@ -1,0 +1,33 @@
+# Networking Code
+# Grady
+# April 15
+# April 17
+
+import tkinter as tk
+from tkinter import ttk
+
+# intializing the window
+root = tk.Tk()
+root.title("iRock")
+root.configure(background = "lightgrey")
+root.geometry('1920x1080')
+
+#Create Tab Control
+tabControl = ttk.Notebook(root)
+
+#Tab1
+tab1 = ttk.Frame(tabControl)
+tabControl.add(tab1, text = 'My Feed')
+
+#Tab2
+tab2 = ttk.Frame(tabControl)
+tabControl.add(tab2, text = 'Map')
+tabControl.pack(expand = 1, fill = "both")
+
+#Tab3
+tab3 = ttk.Frame(tabControl)
+tabControl.add(tab3, text = 'Profile')
+tabControl.pack(expand = 1, fill = "both")
+
+#Calling Main()
+root.mainloop()
