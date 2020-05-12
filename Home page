@@ -1,0 +1,58 @@
+# Imports all modules 
+from tkinter import *
+import os
+import csv
+
+
+    
+global home_page # changes the home page variable to a global variable
+
+
+#from tkinter import *
+title = Tk()
+var = StringVar()
+label = Label( home_page, textvariable=var, relief=RAISED )
+
+var.set("Hey!? How are you doing?")
+label.pack()
+title.mainloop()
+
+#global home_page
+home_page = Tk()
+home_page.geometry("376x667")
+home_page.title("Home")
+scrollbar = Scrollbar(home_page)
+scrollbar.pack( side = RIGHT, fill = Y )
+
+mylist = Listbox(home_page, yscrollcommand = scrollbar.set )
+for line in range(10):
+            #put boxes here   
+
+mylist.pack( side = LEFT, fill = BOTH )
+scrollbar.config( command = mylist.yview )
+
+mainloop()
+
+def scroll(driver, timeout):
+    scroll_pause_time = timeout
+
+    # Get scroll height
+    last_height = driver.execute_script("return document.body.scrollHeight")
+
+    while True:
+        # Scroll down to bottom
+        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+
+        # Wait to load page
+        time.sleep(scroll_pause_time)
+
+        # Calculate new scroll height and compare with last scroll height
+        new_height = driver.execute_script("return document.body.scrollHeight")
+        if new_height == last_height:
+            # If heights are the same it will exit the function
+            break
+        last_height = new_height
+
+home_label=Label(home_page, text = "home page")
+
+
