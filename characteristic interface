@@ -1,0 +1,24 @@
+from tkinter import *
+
+window = Tk()
+
+window.title("Welcome to Irock")
+
+lbl = Label(window, text="Select Characteristics", font=("Times New Roman", 16))
+
+lbl.grid(column=0, row=0)
+
+window.geometry('350x200')
+
+lbl.grid(column=0, row=0)
+
+def clicked():
+    
+    lbl.configure(text="Options")
+
+btn = Button(window, text="Options", command=clicked)
+
+btn.grid(column=1, row=0)
+
+window.mainloop()
+         
