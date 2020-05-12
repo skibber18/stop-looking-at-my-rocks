@@ -8,6 +8,6 @@ with open('rock_database.txt') as csv_file:
             print(f'Column rocks are {", ".join(row)}')
             line_count += 1
         else:
-            print(f'\t{row[0]} is found {row[1]} , and is a {row[2]} color.')
+            print(f'\t{row[0]} is found in the {row[1]} , and has a {row[2]} texture. This rock\'s color is {row[3]}, leaving a streak powder color of {row[4]}. In sunlight, the rock has a {row[5]} luster.')
             line_count += 1
     print(f'Processed {line_count} lines.')
