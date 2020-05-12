@@ -1,7 +1,6 @@
 # Login Code 
 # Lauren and Zachary 
-# April 14 - May 7 
-
+# April 14 - May 12 
 
 # Imports all modules 
 from tkinter import *
@@ -21,10 +20,10 @@ def register():
     # makes variables global
     global username
     global password
-    global question
+    global security
     global username_entry
     global password_entry
-    global question_entry 
+    global security_entry 
     global register_screen
 
     register_screen = Toplevel(main_screen) 
@@ -34,7 +33,7 @@ def register():
     # sets variables for username, password, and security question
     username = StringVar()
     password = StringVar()
-    question = StringVar()
+    security = StringVar()
 
     # Text that gives instructions to the user 
     Label(register_screen, text="Please enter details below to register", bg="skyblue").pack()
@@ -56,12 +55,12 @@ def register():
     Label(register_screen, text="").pack()
 
     # Creates a place for the security question to be answered
-    question_lable = Label(register_screen, text = "Security Question")
-    question_lable.pack()
-    question_lable2 = Label(register_screen, text = "What was the name of your first pet?")
-    question_lable2.pack()
-    question_entry = Entry(register_screen, textvariable=question)
-    question_entry.pack()
+    security_lable = Label(register_screen, text = "Security Question")
+    security_lable.pack()
+    security_lable2 = Label(register_screen, text = "What was the name of your first pet?")
+    security_lable2.pack()
+    security_entry = Entry(register_screen, textvariable=security)
+    security_entry.pack()
     
 
     # Creates a space between the security box and the register button
@@ -110,31 +109,35 @@ def login():
 
 
 def register_user():
-
+    with open("IRock_registration_info.txt", mode='r') as csv_file:
+        csv_reader = csv.reader(csv_file, delimiter=',')
+        for row in csv_reader:
+            if row[0] == username.get():
+                user_repeat()
+                return
     with open("IRock_registration_info.txt", mode='a') as csv_file:
         registration_writer = csv.writer(csv_file, delimiter=',')
- 
-        registration_writer.writerow([username.get(), password.get(), question.get()])
+                
+            
+        registration_writer.writerow([username.get(), password.get(), security.get()])
 
         # Deletes the registration entries from the boxes in the window
         username_entry.delete(0, END)
         password_entry.delete(0, END)
-        question_entry.delete(0, END)
+        security_entry.delete(0, END)
 
         
     # set a label for showing success information on screen 
     Label(register_screen, text="Registration Success", fg="green", font=("calibri", 11)).pack()
-
 
 def user_repeat():
     global user_repeat_screen
     user_repeat_screen = Toplevel(register_screen)
     user_repeat_screen.title("IRock Login")
     user_repeat_screen.geometry("200x150")
-    Label(user_repeat_screen, text="Username Already Exists").pack()
+    Label(user_repeat_screen, text="Username Already Exsists").pack()
     Button(user_repeat_screen, text="Change Username", command=register).pack()
-    Button(user_repeat_screen, text="Login ", command=login_verify).pack()
-
+    Button(user_repeat_screen, text="Login ", command=login).pack()
 
 
 def login_verify():
@@ -185,7 +188,7 @@ def password_not_recognised():
     password_not_recog_screen.geometry("150x100")
     Label(password_not_recog_screen, text="Invalid Password ").pack()
     Button(password_not_recog_screen, text="Try Again", command=delete_password_not_recognised).pack()
-    Button(password_not_recog_screen, text="Forgot Password", command=click_forgot_password).pack()
+    Button(password_not_recog_screen, text="Forgot Password", command=forgot_password).pack()
 
 
 # Creates a "user not found" popup
@@ -199,25 +202,99 @@ def user_not_found():
     Button(user_not_found_screen, text="Register", command=register).pack()
 
 
-# defines the "forgot password" command
 
-def click_forgot_password():
-    global forgot_password
+
+# designs the “forgot password” window
+def forgot_password():
+    # makes variables global 
     global forgot_password_screen
+    global security_verify
+    global security_verify_entry
+
     
-    forgot_password = StringVar()
-    
-    forgot_password_screen = Toplevel(login_screen)
+    forgot_password_screen = Toplevel(main_screen)
     forgot_password_screen.title("Forgot Password")
     forgot_password_screen.geometry("500x200")
-    Label(forgot_password_screen, text="To recover your password, answer the security question below").pack()
-    Label(forgot_password_screen, text="What was the name of your first pet?").pack()
-    forgot_password_entry = Entry(forgot_password_screen, textvariable=forgot_password)
-    forgot_password_entry.pack()
-         
+
+    # sets variables to verify security response 
+    security_verify = StringVar() 
+
+    # Text that gives instructions to the user
+    Label(forgot_password_screen, text="To recover your password, answer the security question below", bg="skyblue").pack()
+    Label(forgot_password_screen, text="What was the name of your first pet?", bg="skyblue").pack()
+    Label(forgot_password_screen, text="").pack()
+
+    # Creates a place for the security response to be entered 
+    security_verify_entry = Entry(forgot_password_screen, textvariable=security_verify)
+    security_verify_entry.pack()
+  
+    # Creates a space between the box and the submit button
+    Label(forgot_password_screen, text="").pack()
+
+    # Creates a button (to submit the response to the security question) in the forgot password window
+    Button(forgot_password_screen, text="Submit", width=10, height=1, bg="blue", command = security_question_verify).pack()
 
 
-# Deletes popups after they appear: 
+
+def security_question_verify():
+    
+    #gets the security answer 
+    security1 = security_verify.get()
+    
+    # this will delete the entry after submit button is pressed
+    security_verify_entry.delete(0, END)
+
+
+    registration_file = "IRock_registration_info.txt"
+
+    #defining verification's conditions 
+    with open("IRock_registration_info.txt", mode='r') as csv_file:
+        csv_reader = csv.reader(csv_file, delimiter=',')
+        securitycheck = False
+        
+        for row in csv_reader:
+            if row[2] == security1:
+                password1 = row[1]
+                securitycheck = True 
+                security_sucess(password1)
+                return
+
+        security_incorrect()
+
+
+# Creates a “security success" popup 
+def security_sucess(password):
+    global security_success_screen   # makes the variable global
+    security_success_screen = Toplevel(forgot_password_screen)
+    security_success_screen.title("Success!")
+    security_success_screen.geometry("200x150")
+    Label(security_success_screen, text="Security response verified").pack()
+    Label(security_success_screen, text="Password: " + password).pack()
+    Button(security_success_screen, text="OK", command = delete_security_success).pack()
+
+
+# Creates a “security incorrect” popup
+def security_incorrect(): 
+    global security_incorrect_screen
+    security_incorrect_screen = Toplevel(forgot_password_screen)
+    security_incorrect_screen.title("Security not verified")
+    security_incorrect_screen.geometry("200x150")
+    Label(security_incorrect_screen, text="Invalid Security Response").pack()
+    Button(security_incorrect_screen, text="Try Again", command=delete_security_incorrect_screen).pack()
+
+
+# Deletes security popups after they appear: 
+# deletes the “security success" popup
+def delete_security_success():
+    security_success_screen.destroy()
+
+# deletes the “security incorrect” popup
+def delete_security_incorrect_screen():
+    security_incorrect_screen.destroy() 
+
+
+
+# Deletes login popups after they appear: 
 # deletes the "login success" popup
 def delete_login_success():
     login_success_screen.destroy()
@@ -249,6 +326,6 @@ Button(text="Register", height="2", width="30", command=register).pack()
 Button(login_success_screen, text="OK", command=delete_login_success).pack()
 
 
+
 main_screen.mainloop() # start the GUI
 main_account_screen() 
-
