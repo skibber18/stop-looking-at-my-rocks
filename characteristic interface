@@ -4,21 +4,39 @@ window = Tk()
 
 window.title("Welcome to Irock")
 
-lbl = Label(window, text="Select Characteristics", font=("Times New Roman", 16))
+clr_lbl = Label(window, text="Color", font=("Times New Roman", 16))
 
-lbl.grid(column=0, row=0)
+clr_lbl.grid(column=0, row=0)
 
-window.geometry('350x200')
+txr_lbl = Label(window, text="Texture", font=("Times New Roman", 16))
 
-lbl.grid(column=0, row=0)
+txr_lbl.grid(column=1, row=0)
 
-def clicked():
-    
-    lbl.configure(text="Options")
+lst_lbl = Label(window, text="Luster", font=("Times New Roman", 16))
 
-btn = Button(window, text="Options", command=clicked)
+lst_lbl.grid(column=2, row=0)
 
-btn.grid(column=1, row=0)
+area_lbl = Label(window, text="Area", font=("Times New Roman", 16))
 
-window.mainloop()
+area_lbl.grid(column=3, row=0)
+
+strk_lbl = Label(window, text="Streak Powder", font=("Times New Roman", 16))
+
+strk_lbl.grid(column=4, row=0)
+
+window.geometry('550x300')
+
+#lbl.grid(column=0, row=0)
+
+clr_txt = Entry(window,width=10)
+
+clr_txt.grid(column=0, row=1)
+
+txr_txt = Entry(window,width=10)
+
+txr_txt.grid(column=1, row=1)
+
+lst_txt = Entry(window,width=10)
+
+lst_txt.grid(column=2, row=1)
          
