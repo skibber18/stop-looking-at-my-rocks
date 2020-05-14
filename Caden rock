@@ -1,0 +1,456 @@
+Q_1 = input (" Did you find this rock in, Volcanic and or mountainous area: A) subduction zone: B) Sand Hills: C) Near a large body of water: D) In southern United states: E) In or near limestone: F) ")
+if Q_1 == "A":
+    Q_2AA = input (" What color is this rock: White: A) Black: B) Alternating light and dark bands: C) White with black speackls: E) Yellow orange or red: F) Purple: G) ")
+    if Q_2AA == "A":
+        Q_3AAA = input (" What is the texture of the rock: Glassy and sharp: A) Rough and chalky: B) Smooth: C) Chalky: D) Rough and sharp: E) Rought: F) ")
+        if Q_3AAA == "A":
+            Q_4AAAA = input (" What is the luster of the rock: Grainy and pearly: A) Glassy: B) Grainy: C) Shiny: D) Pearly: E) vitreous: F) Dull: G) ")
+            if Q_4AAAA == "A":
+                Q_5AAAAA = input (" What is the streak color: White: A) No streak: B) Grey: C) Red: D) ")
+                if Q_5AAAAA == "A":
+
+                elif Q_5AAAAA == "B":
+
+                elif Q_5AAAAA == "C":
+
+                else Q_5AAAAA == "D":
+
+            elif Q_4AAAA == "B":
+                 Q_5AAAAB = input (" What is the streak color: White: A) No streak: B) Grey: C) Red: D) ")
+                if Q_5AAAAB == "A":
+
+                elif Q_5AAAAB == "B":
+
+                elif Q_5AAAAB == "C":
+
+                else Q_5AAAAB == "D":
+
+            elif Q_4AAAA == "C":
+                Q_5AAAAC = input (" What is the streak color: White: A) No streak: B) Grey: C) Red: D) ")
+                if Q_5AAAAC == "A":
+
+                elif Q_5AAAAC == "B":
+
+                elif Q_5AAAAC == "C":
+
+                else Q_5AAAAC == "D":
+
+
+            elif Q_4AAAA == "D":
+                Q_5AAAAD = input (" What is the streak color: White: A) No streak: B) Grey: C) Red: D) ")
+                if Q_5AAAAD == "A":
+
+                elif Q_5AAAAD == "B":
+
+                elif Q_5AAAAD == "C":
+        
+                else Q_5AAAAD == "D":
+
+            elif Q_4AAAA == "E":
+
+                Q_5AAAAE = input (" What is the streak color: White: A) No streak: B) Grey: C) Red: D) ")
+                if Q_5AAAAE == "A":
+
+                elif Q_5AAAAE == "B":
+
+                elif Q_5AAAAE == "C":
+
+                else Q_5AAAAE == "D":
+
+                    
+
+             elif Q_4AAAA == "F":
+                Q_5AAAAF = input (" What is the streak color: White: A) No streak: B) Grey: C) Red: D) ")
+                if Q_5AAAAF == "A":
+
+                elif Q_5AAAAF == "B":
+
+                elif Q_5AAAAF == "C":
+
+                else Q_5AAAAF == "D":
+                
+
+             else Q_4AAAA == "G":
+                Q_5AAAAG = input (" What is the streak color: White: A) No streak: B) Grey: C) Red: D) ")
+                if Q_5AAAAG == "A":
+
+                elif Q_5AAAAG == "B":
+
+                elif Q_5AAAAG == "C":
+
+                else Q_5AAAAG == "D":
+
+
+        elif Q_3AAA == "B":
+            Q_4AAAB = input (" What is the luster of the rock: Grainy and pearly: A) Glassy: B) Grainy: C) Shiny: D) Pearly: E) vitreous: F) Dull: G) ")
+            if Q_4AAAB == "A":
+
+            elif Q_4AAAB == "B":
+
+            elif Q_4AAAB == "C":
+    
+            elif Q_4AAAB == "D":
+
+            elif Q_4AAAB == "E":
+
+            elif Q_4AAAB == "F":
+
+            else Q_4AAAB == "G":
+
+
+        elif Q_3AAA == "C":
+    
+            Q_4AAAC = input (" What is the luster of the rock: Grainy and pearly: A) Glassy: B) Grainy: C) Shiny: D) Pearly: E) vitreous: F) Dull: G) ")
+            if Q_4AAAC == "A":
+
+            elif Q_4AAAC == "B":
+
+            elif Q_4AAAC == "C":
+
+            elif Q_4AAAC == "D":
+
+            elif Q_4AAAC == "E":
+
+            elif Q_4AAAC == "F":
+
+            else Q_4AAAC == "G":
+
+
+        elif Q_3AAA == "D":
+            Q_4AAAD = input (" What is the luster of the rock: Grainy and pearly: A) Glassy: B) Grainy: C) Shiny: D) Pearly: E) vitreous: F) Dull: G) ")
+            if Q_4AAAD == "A":
+
+            elif Q_4AAAD == "B":
+
+            elif Q_4AAAD == "C":
+
+            elif Q_4AAAD == "D":
+
+            elif Q_4AAAD == "E":
+
+            elif Q_4AAAD == "F":
+
+            else Q_4AAAD == "G":
+
+
+        elif Q_3AAA == "E":
+            Q_4AAAE = input (" What is the luster of the rock: Grainy and pearly: A) Glassy: B) Grainy: C) Shiny: D) Pearly: E) vitreous: F) Dull: G) ")
+            if Q_4AAAE == "A":
+    
+            elif Q_4AAAE == "B":
+
+            elif Q_4AAAE == "C":
+
+            elif Q_4AAAE == "D":
+
+            elif Q_4AAAE == "E":
+
+            elif Q_4AAAE == "F":
+
+            else Q_4AAAE == "G":
+
+
+        else Q_3AAA == "F":  
+            Q_4AAAF = input (" What is the luster of the rock: Grainy and pearly: A) Glassy: B) Grainy: C) Shiny: D) Pearly: E) vitreous: F) Dull: G) ")
+            if Q_4AAAF == "A":
+
+            elif Q_4AAAF == "B":
+
+            elif Q_4AAAF == "C":
+
+            elif Q_4AAAF == "D":
+
+            elif Q_4AAAF == "E":
+
+            elif Q_4AAAF == "F":
+
+            else Q_4AAAF == "G":
+
+    
+    elif Q_2AA == "B":
+        Q_3ABB = input (" What is the texture of the rock: Glassy and sharp: A) Rough and chalky: B) Smooth: C) Chalky: D) Rough and sharp: E) Rought: F) ")
+        if Q_3ABB == "A":
+
+        elif Q_3ABB == "B":
+
+        elif Q_3ABB == "C":
+    
+        elif Q_3ABB == "D":
+
+        elif Q_3ABB == "E":
+
+        else Q_3ABB == "F":
+
+
+    elif Q_2AA == "C":
+        Q_3ACC = input (" What is the texture of the rock: Glassy and sharp: A) Rough and chalky: B) Smooth: C) Chalky: D) Rough and sharp: E) Rought: F) ")
+        if Q_3ACC == "A":
+
+        elif Q_3ACC == "B":
+
+        elif Q_3ACC == "C":
+
+        elif Q_3ACC == "D":
+
+        elif Q_3ACC == "E":
+
+        else Q_3ACC == "F":
+
+
+
+    elif Q_2AA == "D":
+        Q_3ADD = input (" What is the texture of the rock: Glassy and sharp: A) Rough and chalky: B) Smooth: C) Chalky: D) Rough and sharp: E) Rought: F) ")
+        if Q_3ADD == "A":
+
+        elif Q_3ADD == "B":
+    
+        elif Q_3ADD == "C":
+    
+        elif Q_3ADD == "D":
+
+        elif Q_3ADD == "E":
+
+        else Q_3ADD == "F":  
+
+
+    elif Q_2AA == "E":
+        Q_3AEE = input (" What is the texture of the rock: Glassy and sharp: A) Rough and chalky: B) Smooth: C) Chalky: D) Rough and sharp: E) Rought: F) ")
+        if Q_3AEE == "A":
+
+        elif Q_3AEE == "B":
+
+        elif Q_3AEE == "C":
+
+        elif Q_3AEE == "D":
+
+        elif Q_3AEE == "E":
+
+        else Q_3AEE == "F":
+
+
+    elif Q_2AA == "F":
+        Q_3AF = input (" What is the texture of the rock: Glassy and sharp: A) Rough and chalky: B) Smooth: C) Chalky: D) Rough and sharp: E) Rought: F) ")
+        if Q_3AFF == "A":
+
+        elif Q_3AFF == "B":
+
+        elif Q_3AFF == "C":
+
+        elif Q_3AFF == "D":
+
+        elif Q_3AFF == "E":
+    
+        else Q_3AFF == "F":
+    
+        else Q_2AFF == "G":
+
+elif Q_1 == "B":
+    Q_2BB = input (" What color is this rock: White: A) Black: B) Alternating light and dark bands: C) White with black speackls: E) Yellow orange or red: F) Purple: G) ")
+    if Q_2BB == "A":
+        Q_3BBA = input (" What is the texture of the rock: Glassy and sharp: A) Rough and chalky: B) Smooth: C) Chalky: D) Rough and sharp: E) Rought: F) ")
+        if Q_3BBA == "A":
+
+        elif Q_3BBA == "B":
+
+        elif Q_3BBA == "C":
+
+        elif Q_3BBA == "D":
+
+        elif Q_3BBA == "E":
+
+        else Q_3BBA == "F":  
+
+    elif Q_2BB == "B":
+
+        Q_3BBB = input (" What is the texture of the rock: Glassy and sharp: A) Rough and chalky: B) Smooth: C) Chalky: D) Rough and sharp: E) Rought: F) ")
+        if Q_3BBB == "A":
+
+        elif Q_3BBB == "B":
+
+        elif Q_3BBB == "C":
+
+        elif Q_3BBB == "D":
+
+        elif Q_3BBB == "E":
+
+        else Q_3BBB == "F":
+
+    elif Q_2BB == "C":
+    
+        Q_3BBC = input (" What is the texture of the rock: Glassy and sharp: A) Rough and chalky: B) Smooth: C) Chalky: D) Rough and sharp: E) Rought: F) ")
+        if Q_3BBC == "A":
+
+        elif Q_3BBC == "B":
+
+        elif Q_3BBC == "C":
+
+        elif Q_3BBC == "D":
+
+        elif Q_3BBC == "E":
+
+        else Q_3BBC == "F":
+        
+
+    elif Q_2BB == "D":
+        Q_3BBD = input (" What is the texture of the rock: Glassy and sharp: A) Rough and chalky: B) Smooth: C) Chalky: D) Rough and sharp: E) Rought: F) ")
+        if Q_3BBD == "A":
+
+        elif Q_3BBD == "B":
+
+        elif Q_3BBD == "C":
+
+        elif Q_3BBD == "D":
+
+        elif Q_3BBD == "E":
+
+        else Q_3BBD == "F":
+
+    elif Q_2BB == "E":
+        Q_3BBE = input (" What is the texture of the rock: Glassy and sharp: A) Rough and chalky: B) Smooth: C) Chalky: D) Rough and sharp: E) Rought: F) ")
+        if Q_3BBE == "A":
+
+        elif Q_3BBE == "B":
+
+        elif Q_3BBE == "C":
+
+        elif Q_3BBE == "D":
+
+        elif Q_3BBE == "E":
+
+        else Q_3BBE == "F":
+
+    elif Q_2BB == "F":
+        Q_3BBF = input (" What is the texture of the rock: Glassy and sharp: A) Rough and chalky: B) Smooth: C) Chalky: D) Rough and sharp: E) Rought: F) ")
+        if Q_3BBF == "A":
+
+        elif Q_3BBF == "B":
+
+        elif Q_3BBF == "C":
+
+        elif Q_3BBF == "D":
+
+        elif Q_3BBF == "E":
+
+        else Q_3BBF == "F":
+
+    else Q_2BB == "G":
+        Q_3BBG = input (" What is the texture of the rock: Glassy and sharp: A) Rough and chalky: B) Smooth: C) Chalky: D) Rough and sharp: E) Rought: F) ")
+        if Q_3BBG == "A":
+
+        elif Q_3BBG == "B":
+
+        elif Q_3BBG == "C":
+
+        elif Q_3BBG == "D":
+
+        elif Q_3BBG == "E":
+
+        else Q_3BBG == "F":
+        
+elif Q_1 == "C":
+            
+    Q_2C = input (" What color is this rock: White: A) Black: B) Alternating light and dark bands: C) White with black speackls: E) Yellow orange or red: F) Purple: G) ")
+    if Q_2C == "A":
+    
+    elif Q_2C == "B":
+
+    elif Q_2C == "C":
+
+    elif Q_2C == "D":
+
+    elif Q_2C == "E":
+
+    elif Q_2C == "F":
+
+    else Q_2C == "G":
+
+elif Q_1 == "D":
+    Q_2D = input (" What color is this rock: White: A) Black: B) Alternating light and dark bands: C) White with black speackls: E) Yellow orange or red: F) Purple: G) ")
+    if Q_2D == "A":
+    
+    elif Q_2D == "B":
+    
+    elif Q_2D == "C":
+
+    elif Q_2D == "D":
+
+    elif Q_2D == "E":
+
+    elif Q_2D == "F":
+
+    else Q_2D == "G":
+elif Q_1 == "E":
+    Q_2E = input (" What color is this rock: White: A) Black: B) Alternating light and dark bands: C) White with black speackls: E) Yellow orange or red: F) Purple: G) ")
+    if Q_2E == "A":
+    
+    elif Q_2E == "B":
+
+    elif Q_2E == "C":
+
+    elif Q_2E == "D":
+
+    elif Q_2E == "E":
+
+    elif Q_2E == "F":
+
+    else Q_2E == "G":
+
+else Q_1 == "F":
+    Q_2F = input (" What color is this rock: White: A) Black: B) Alternating light and dark bands: C) White with black speackls: E) Yellow orange or red: F) Purple: G) ")
+    if Q_2F == "A":
+    
+    elif Q_2F == "B":
+
+    elif Q_2F == "C":
+
+    elif Q_2F == "D":
+
+    elif Q_2F == "E":
+
+    elif Q_2F == "F":
+
+    else Q_2F == "G":
+
+
+
+
+Q_3F = input (" What is the texture of the rock: Glassy and sharp: A) Rough and chalky: B) Smooth: C) Chalky: D) Rough and sharp: E) Rought: F) ")
+if Q_3F == "A":
+
+elif Q_3F == "B":
+
+elif Q_3F == "C":
+
+elif Q_3F == "D":
+
+elif Q_3F == "E":
+
+else Q_3F == "F":
+           
+Q_4AAAA = input (" What is the luster of the rock: Grainy and pearly: A) Glassy: B) Grainy: C) Shiny: D) Pearly: E) vitreous: F) Dull: G) ")
+if Q_4AAAA == "A":
+
+elif Q_4AAAA == "B":.
+
+elif Q_4AAAA == "C":
+
+elif Q_4AAAA == "D":
+
+elif Q_4AAAA == "E":
+
+elif Q_4AAAA == "F":
+
+else Q_4AAAA == "G":
+
+Q_5AAAAA = input (" What is the streak color: White: A) No streak: B) Grey: C) Red: D) ")
+if Q_5AAAAA == "A":
+
+elif Q_5AAAAA == "B":
+
+elif Q_5AAAAA == "C":
+
+else Q_5AAAAA == "D":
+
+
+    
+
